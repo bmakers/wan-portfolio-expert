@@ -41,7 +41,10 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-navy font-serif text-2xl font-bold">
+        <a href="#home" className={cn(
+          "font-serif text-2xl font-bold transition-colors",
+          isScrolled ? "text-navy" : "text-white"
+        )}>
           Daniel Wan
         </a>
 
@@ -51,19 +54,28 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-charcoal hover:text-navy font-medium transition-colors"
+              className={cn(
+                "font-medium transition-colors",
+                isScrolled ? "text-charcoal hover:text-navy" : "text-white hover:text-gold"
+              )}
             >
               {link.name}
             </a>
           ))}
-          <Button className="bg-navy hover:bg-navy/90 text-white">
+          <Button className={cn(
+            "text-white transition-colors",
+            isScrolled ? "bg-navy hover:bg-navy/90" : "bg-gold hover:bg-gold/90"
+          )}>
             Get in Touch
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-navy"
+          className={cn(
+            "md:hidden transition-colors",
+            isScrolled ? "text-navy" : "text-white"
+          )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
