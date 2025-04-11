@@ -88,9 +88,16 @@ const Services = () => {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="text-navy border-navy w-full">
-                  Learn More
-                </Button>
+                <a 
+                  href="https://calendly.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full"
+                >
+                  <Button variant="outline" className="text-navy border-navy w-full">
+                    Book a Call
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           ))}
