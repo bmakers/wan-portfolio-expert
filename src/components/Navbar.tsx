@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -40,10 +41,7 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className={cn(
-          "font-serif text-2xl font-bold transition-colors",
-          isScrolled ? "text-navy" : "text-white"
-        )}>
+        <a href="#home" className="text-navy font-serif text-2xl font-bold">
           Daniel Wan
         </a>
 
@@ -53,28 +51,19 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className={cn(
-                "font-medium transition-colors",
-                isScrolled ? "text-charcoal hover:text-navy" : "text-white hover:text-gold"
-              )}
+              className="text-charcoal hover:text-navy font-medium transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <Button className={cn(
-            "text-white transition-colors",
-            isScrolled ? "bg-navy hover:bg-navy/90" : "bg-gold hover:bg-gold/90"
-          )}>
+          <Button className="bg-navy hover:bg-navy/90 text-white">
             Get in Touch
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className={cn(
-            "md:hidden transition-colors",
-            isScrolled ? "text-navy" : "text-white"
-          )}
+          className="md:hidden text-navy"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (

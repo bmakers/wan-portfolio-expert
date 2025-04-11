@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -87,16 +88,9 @@ const Services = () => {
                 </ul>
               </CardContent>
               <CardFooter>
-                <a 
-                  href="https://calendly.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-full"
-                >
-                  <Button variant="outline" className="text-navy border-navy w-full">
-                    Book a Call
-                  </Button>
-                </a>
+                <Button variant="outline" className="text-navy border-navy w-full">
+                  Learn More
+                </Button>
               </CardFooter>
             </Card>
           ))}
